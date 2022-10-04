@@ -1,0 +1,9 @@
+<%- layout('layouts/main.ejs') %>
+<h1>profile</h1>
+
+<div class="card card-body">
+  <h3>Correo: <%= user.email %></h3>
+
+  <p>contraseña encriptada con Bcrypt: <%= user.password %></p>
+  <p>ID de MongoDB: <%= user._id %></p>
+</div>
