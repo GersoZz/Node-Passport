@@ -38,7 +38,7 @@ app.use((req, res, next) => {
   app.locals.signupMessage = req.flash("signupMessage");
   app.locals.signinMessage = req.flash("signinMessage");
   app.locals.user=req.user;//P! esto es de passport
-  console.log('user: ',app.locals.user);
+  //console.log('user: ',app.locals.user);
   next();
 });
 

@@ -8,14 +8,14 @@ const User = require("../models/user");
 passport.serializeUser((user, done) => {
   //esto se ejecuta cuando ya hemos ejecutado done()// o sea cuando ya tenemos un usuario guardado 
   
-  console.log('serializando')
+  //console.log('serializando')
   //req.session.passport.user
   done(null, user.id); //guarda el id
 });
 
 //pasport va buscar el nuevo usuario a traves del id que esta guardado en la cookie (en el navegador)
 passport.deserializeUser(async (id, done) => {
-  console.log('desserializando')
+  //console.log('desserializando')
   const user = await User.findById(id);
   done(null, user);
 });
